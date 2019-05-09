@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1 align='center'> Build a Blog! </h1>
+    
+    <hr />
+
+    
+        <ul>
+            {% for blog in blogs %}
+            <li> 
+             <a href = '/newblog?id={{blog.id}}'>  <h3>{{blog.title}}</h3> </a>
+                <br>
+                {{blog.body}}
+            <hr>    
+            </li>
+            {% endfor %}
+        </ul>
+    
+        <hr />
+
+      
+   
+{% endblock %}
