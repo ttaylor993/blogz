@@ -2,10 +2,8 @@
 
 {% block content %}
 
-    <h1 align='center'> Posted Blogs! </h1>
+    <h1 align='center'> Single User Blogs! </h1>
     
-    <hr />
-
     
         <ul>
             {% for blog in blogs %}
@@ -13,11 +11,15 @@
              <a href = '/newblog?id={{blog.id}}'>  <h3>{{blog.title}}</h3> </a>
                 <br>
                 {{blog.body}}
-            <hr>    
+            
+               {{blog.owner.username}}
+        
             </li>
             {% endfor %}
         </ul>
     
-        <hr />      
+        <hr />
+
+      
    
 {% endblock %}
